@@ -1,0 +1,22 @@
+{
+  "name": "devtinder_offical",
+  "version": "1.0.0",
+  "description": "this is offical devTinder",
+  "main": "app.js",
+  "scripts": {
+    "dev" : "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technosaurabh/devTinder_offical.git"
+  },
+  "author": "saurabh kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/technosaurabh/devTinder_offical/issues"
+  },
+  "homepage": "https://github.com/technosaurabh/devTinder_offical#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
