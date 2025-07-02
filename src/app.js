@@ -6,22 +6,49 @@ const express = require('express');
 
 const app = express();
 
-// app.get('/', (req, res)=>{
-//     res.send("hello world")
-// })
 
-app.use("/getUserData", (req,res, next) => {
-    
-    
-    console.log("after the next")
-    // res.send("we are testers")
-    next();
-}, (req,res, next)=>{
-    // res.send("we are devs")
-    console.log("we are devs")
-
-    next();
+app.use('/', (err, req, res, next)=>{
+    console.log("this is the middleware")
+    // next();
+    res.status(500).send("something went wrong first route handler ")
 })
+
+
+
+
+
+app.post("/getUserData", (req,res, next) => {
+    console.log("this is getUserData");
+    throw new Error("something went wrong");
+    res.send("this is post api");
+})
+
+
+app.get("/getUserData", (req,res, next) => {
+    console.log("this is getUserData");
+    throw new Error("something went wrong");
+    res.send("this is post api");
+})
+
+app.get("/gototinderdata", (req,res, next) => {
+    console.log("this is getUserData");
+    throw new Error("something went wrong");
+    res.send("this is post api");
+})
+
+app.post("/inamin", (req,res, next) => {
+    console.log("this is getUserData");
+    throw new Error("something went wrong");
+    res.send("this is post api");
+})
+
+
+app.use('/', (err,  req, res, next)=>{
+    console.log("this is last error handle")
+    // next();
+    res.status(500).send("something went wrong first route handler ")
+})
+
 
 
 
@@ -34,11 +61,6 @@ app.use("/getUserData", (req,res, next) => {
 // })
 
 
-
-
-app.use('/', (req,res) => {
-    res.send("this is deafult case")
-})
 
 
 
