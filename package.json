@@ -4,7 +4,7 @@
   "description": "this is offical devTinder",
   "main": "app.js",
   "scripts": {
-    "dev" : "nodemon src/app.js"
+    "dev": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/technosaurabh/devTinder_offical#readme",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "mongoose": "^8.16.1"
   }
 }
